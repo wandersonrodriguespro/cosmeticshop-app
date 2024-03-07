@@ -5,25 +5,94 @@ import { theme } from '../../styles/theme'
 export const Container = styled.div`
   background-color: ${theme.colors.black};
 `
-
-export const Spacer = styled.div`
+export const Subscribe = styled.div`
   width: 100%;
-  height: 6vh;
+  height: 33.438rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: ${theme.colors.white};
+    text-align: center;
+    font-weight: 700;
+  }
+  span {
+    font-weight: 300;
+    font-style: italic;
+    color: ${theme.colors.secondary};
+  }
+
+  h6 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.09rem;
+    margin-top: 1.5rem;
+    color: ${theme.colors.white};
+    text-align: center;
+  }
+`
+export const InputList = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+
+  label {
+    font-size: 1.15rem;
+    color: ${theme.colors.white};
+  }
+
+  div {
+    display: flex;
+    height: 6rem;
+    width: 100%;
+    padding-top: 0.75rem;
+  }
+
+  input {
+    border: 2px solid ${theme.colors.white};
+    height: 3rem;
+    border-right: none;
+    background-color: transparent;
+    outline: none;
+    min-width: 700px;
+    font-size: 1.5rem;
+    color: ${theme.colors.white};
+    padding-left: 1rem;
+
+    &::placeholder {
+      color: ${theme.colors.white};
+      padding-left: 1rem;
+    }
+
+    &:hover {
+      border: 1px solid ${theme.colors.secondary};
+      border-right: none;
+    }
+  }
 `
 
 export const Content = styled.div`
   background-color: ${theme.colors.black};
   border-top: 1px solid ${theme.colors.neutral};
   border-bottom: 1px solid ${theme.colors.neutral};
-  /* height: 60vh; */
+  height: 50vh;
   width: 100%;
-  padding-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+`
 
+export const MainFooter = styled.div`
+  width: 100%;
   display: flex;
   gap: 1rem;
   justify-content: space-around;
   align-items: flex-start;
-  padding-top: 7rem;
+  /* padding-top: 7rem; */
 `
 
 export const Collum = styled.div`
@@ -81,7 +150,7 @@ export const Link = styled.a`
     height: 2px;
     background-color: ${theme.colors.secondary};
     position: absolute;
-    bottom: 3px;
+    bottom: 1px;
     left: 0;
     transition: 0.5s ease-in-out;
   }
@@ -127,5 +196,6 @@ export const TextCopy = styled.p`
   span {
     color: ${theme.colors.secondary};
     margin-left: 0.4rem;
+    font-weight: 700;
   }
 `
